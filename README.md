@@ -35,18 +35,15 @@ Port 22
 
 **Langkah 1: Konfigurasi file named.conf seperti dibawah ini**
 
-![3](https://github.com/2DSD/Repository-Final-Project-OS-Server-Dan-System-Admin-22.83.0835/assets/114807215/7de15669-1941-4cfb-8d09-a5ef25ea5dc9)
-)
+![3](https://github.com/2DSD/Repository-Final-Project-OS-Server-Dan-System-Admin-22.83.0835/assets/114807215/3583071a-253b-4660-ad4d-b2cc74b23667)
 
 **Disini saya menambahkan IP forwarder dengan menggunakan IP Gateway dan DNS Public 8.8.8.8 fungsinya ketika Client menggunakan IP DNS Lokal, maka Client masih dapat mengakses ke Internet. Silahkan sesuaikan dengan IP DNS masing-masing**
 
-![4](https://github.com/2DSD/Repository-Final-Project-OS-Server-Dan-System-Admin-22.83.0835/assets/114807215/bb98e786-2f8c-4f31-8d34-6e287e03e81a)
-)
+![4](https://github.com/2DSD/Repository-Final-Project-OS-Server-Dan-System-Admin-22.83.0835/assets/114807215/80e5fa9c-25ab-4df2-a9b2-4d3af767ee51)
 
 **Selanjutnya, saya akan menambahkan dua file Zone yaitu Forward Zone File dan Reverse Zone. Untuk nama domain disini saya menggunakan nama saya "georelbonai.com". Silahkan sesuaikan dengan nama domain masing-masing.**
 
-![5](https://github.com/2DSD/Repository-Final-Project-OS-Server-Dan-System-Admin-22.83.0835/assets/114807215/9ccf0a35-df4f-44c5-974a-0abb6f6e1af6)
-)
+![5](https://github.com/2DSD/Repository-Final-Project-OS-Server-Dan-System-Admin-22.83.0835/assets/114807215/3d4c0dc9-f783-4787-baf0-6976221bb30e)
 
 **Langkah 2: Buat file baru untuk forward zone**
 ```
@@ -56,8 +53,7 @@ nano /var/named/db.Arsya.com
 
 **Lalu tambahkan script seperti dibawah ini**
 
-![7](https://github.com/2DSD/Repository-Final-Project-OS-Server-Dan-System-Admin-22.83.0835/assets/114807215/c96229ae-c7f3-491b-a4b0-3c01b8258402)
-)
+![7](https://github.com/2DSD/Repository-Final-Project-OS-Server-Dan-System-Admin-22.83.0835/assets/114807215/2d8dc91e-5799-428b-baa9-0f8cb853263b)
 
 **Langkah 3: Buat file reverse zone**
 
@@ -68,8 +64,7 @@ nano /var/named/db.173.168.192
 
 **Tambahkan script seperti dibawah ini:**
 
-![9](https://github.com/2DSD/Repository-Final-Project-OS-Server-Dan-System-Admin-22.83.0835/assets/114807215/22ab258e-7838-4196-8b56-a726508b4068)
-)
+![9](https://github.com/2DSD/Repository-Final-Project-OS-Server-Dan-System-Admin-22.83.0835/assets/114807215/fc6eb6af-7872-44d9-8325-2e92977bce82)
 
 **Langkah 4: Simpan Konfigurasi dan Jalankan Service DNS**
 
@@ -82,8 +77,7 @@ systemctl enable named
 ```
 **Cek juga status Service DNS Server, pastikan service berjalan dengan baik**
 
-![11](https://github.com/2DSD/Repository-Final-Project-OS-Server-Dan-System-Admin-22.83.0835/assets/114807215/031b6ce6-108d-4c4f-82e5-be1ab50eacdf)
-
+![11](https://github.com/2DSD/Repository-Final-Project-OS-Server-Dan-System-Admin-22.83.0835/assets/114807215/6196e5e1-1950-41ef-8939-a584c79a588f)
 
 #### 2.3 Tambahkan Firewall
 **Langkah 1: Tambahkan Firewall pada Service DNS**
@@ -98,22 +92,18 @@ firewall-cmd --reload
 ```
 nano /etc/resolv.conf
 ```
-![14](https://github.com/2DSD/Repository-Final-Project-OS-Server-Dan-System-Admin-22.83.0835/assets/114807215/a0164245-0cea-4c93-8f6d-92ee2aee62b0)
-
-
+![14](https://github.com/2DSD/Repository-Final-Project-OS-Server-Dan-System-Admin-22.83.0835/assets/114807215/4d845646-08c3-4eab-82f9-06f20fe8d42b)
 
 #### 2.5 Pengetesan
 **Langkah 1: Lakukan pengetesan**
 
 **Untuk pengetesan silahkan jalankan perintah nslookup nama domain, jika berhasil maka nama domain akan di translasikan ke alamat IP Address Server**
 
-![15](https://github.com/2DSD/Repository-Final-Project-OS-Server-Dan-System-Admin-22.83.0835/assets/114807215/472bc6d8-bdf4-4935-bb64-2dd0d3a6231e)
-
+![15](https://github.com/2DSD/Repository-Final-Project-OS-Server-Dan-System-Admin-22.83.0835/assets/114807215/c24dcf6f-b50d-4690-bde8-fc4e7f32f3ac)
 
 **Lalu test ping ke nama Domain dari Laptop Host**
 
-![16](https://github.com/2DSD/Repository-Final-Project-OS-Server-Dan-System-Admin-22.83.0835/assets/114807215/4c65b782-039d-49e6-85be-e5ba78789b35)
-
+![16](https://github.com/2DSD/Repository-Final-Project-OS-Server-Dan-System-Admin-22.83.0835/assets/114807215/c028f3d0-d871-436e-be1d-4be0fc94e0b1)
 
 ## 3. Instalasi dan Konfigurasi FTP dan Samba Server
 
