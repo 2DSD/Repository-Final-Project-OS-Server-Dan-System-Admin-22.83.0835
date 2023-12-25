@@ -35,7 +35,9 @@ Port 22
 
 **Langkah 1: Konfigurasi file named.conf seperti dibawah ini**
 
+
 ![3](https://github.com/2DSD/Repository-Final-Project-OS-Server-Dan-System-Admin-22.83.0835/assets/114807215/3583071a-253b-4660-ad4d-b2cc74b23667)
+
 
 **Disini saya menambahkan IP forwarder dengan menggunakan IP Gateway dan DNS Public 8.8.8.8 fungsinya ketika Client menggunakan IP DNS Lokal, maka Client masih dapat mengakses ke Internet. Silahkan sesuaikan dengan IP DNS masing-masing**
 
@@ -43,7 +45,7 @@ Port 22
 
 **Selanjutnya, saya akan menambahkan dua file Zone yaitu Forward Zone File dan Reverse Zone. Untuk nama domain disini saya menggunakan nama saya "georelbonai.com". Silahkan sesuaikan dengan nama domain masing-masing.**
 
-![5](https://github.com/2DSD/Repository-Final-Project-OS-Server-Dan-System-Admin-22.83.0835/assets/114807215/3d4c0dc9-f783-4787-baf0-6976221bb30e)
+!gambar 5![5](https://github.com/2DSD/Repository-Final-Project-OS-Server-Dan-System-Admin-22.83.0835/assets/114807215/3d4c0dc9-f783-4787-baf0-6976221bb30e)
 
 **Langkah 2: Buat file baru untuk forward zone**
 ```
@@ -209,8 +211,7 @@ systemctl restart vsftpd
 . FTP Server
    ini adalah Tampilan dari FTP client(Menggunakan Filezila)
 
-![Filezila Client FTP](![25](https://github.com/2DSD/Repository-Final-Project-OS-Server-Dan-System-Admin-22.83.0835/assets/114807215/f4052a8f-7517-44fa-b93e-b5c633ddac51)
-)
+![25](https://github.com/2DSD/Repository-Final-Project-OS-Server-Dan-System-Admin-22.83.0835/assets/114807215/2733dbdc-a1fa-4652-a15c-ad51f5836ca4)
 
 ## 4. Instalasi dan Konfigurasi WEB Server
 #### 4.1 Instalasi dan Konfigurasi HTTPd
